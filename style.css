@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700&display=swap');
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Pale-blue);
+}
+.card {
+    background-color:#fff;
+    width: 330px;
+    height: 563px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 100px auto;
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+.card__header-image {
+    width: 100%;
+    height: 155px;
+}
+.card__title {
+    text-align: center;
+    margin-top: 35px;
+    color: var(--Dark-blue);
+}
+.card__text {
+    color: var(--Desaturated-blue);
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 25px;
+    padding: 0px 30px;
+    font-weight: 500;
+}
+.card__plan {
+    background-color: var(--Very-pale-blue);
+    height: 80px;
+    margin: 30px 24px 0px 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: .7em;
+}
+.card__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+.card__plan-annual__title {
+    font-size: .9em;
+    /* padding-right: 30px; */
+    text-align: left;
+    color: var(--Dark-blue);
+}
+.card__plan-annual__price {
+    color: var(--Desaturated-blue);
+    font-size: .9em;
+}
+.card__plan-change {
+    color: var(--Bright-blue);
+    font-size: .9em;
+    font-weight: 700;
+}
+.card__plan-change:hover {
+    text-decoration: none;
+}
+.card__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:25px 30px;
+}
+.card__buttons-submit {
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    width: 100%;
+    height: 50px;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: .7em;
+    transition: 0.6s;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25),
+    0 20px 20px rgba(56, 41, 224, 0.1903);
+    font-size: 16px;
+}
+.card__buttons-submit:hover {
+    background-color: hsla(245, 75%, 52%, 0.637);
+}
+.card__buttons-cancel {
+    margin-top: 25px;
+    color: var(--Desaturated-blue);
+    width: fit-content;
+    font-weight: 700;
+    text-decoration: none;
+}
+.card__buttons-cancel:hover {
+    color: var(--Dark-blue);
+}
+@media (min-width: 620px) {
+    body {
+        background-image: url('./images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+    }
+    .card {
+        width: 450px;
+        height: 695px;
+    }
+    .card__header-image {
+        width: 100%;
+        height: 215px;
+    }
+    .card__title {
+        margin-top: 45px;
+    }
+    .card__text {
+        margin-top: 30px;
+        font-size: 1em;
+        padding: 0px 70px;
+    }
+    .card__plan {
+        margin: 30px 40px 0px 40px;
+    }
+    .card__plan-annual__title {
+        padding-right: 60px;
+    }
+    .card__buttons {
+        margin: 30px 40px;
+    }
+    .card__buttons-cancel {
+        margin-top: 33px;
+    }
+}
